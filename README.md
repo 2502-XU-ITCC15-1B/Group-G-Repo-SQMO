@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Project Name
 
 ## Overview
@@ -82,3 +83,6 @@ Planned future work includes:
 ## Notes
 
 This repository represents an early stage of development. Further implementation is required before the system can be tested, deployed, or considered production-ready.
+=======
+# Group-G-Repo-SQMO
+>>>>>>> c2a6ca96f546d68bda70be731e37f6b9b2a95bfb
