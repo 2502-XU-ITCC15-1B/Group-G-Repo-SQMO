@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    background-color: #283971;
+    height: 80px;
+    padding: 0 30px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+}
+
+#header img {
+    height: 50px;
+    width: auto;
+}
+
+#menuBtn {
+    margin-left: auto;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.page_name,
+#Primary_reports,
+#Secondary_reports {
+    margin-top: 100px;
+}
+
+.page_name {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;     
+}
+
+#Primary_reports {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 20px;
+    width: min(90%, 1400px);
+    margin: 20px auto;
+}
+
+.report_btn {
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+}
+
+.report_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+#Secondary_reports {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 20px;
+    width: min(90%, 1400px);
+    margin: 10px auto 30px;
+}
+
+.ndreport_btn {
+    width: 100%;
+    height: 40px;
+    background-color: #3a52a3;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    text-align: center;
+    padding: 4px 8px;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.1;
+    transition: 0.2s ease;
+}
+
+.ndreport_btn:hover {
+    background-color: #2d4373;
+    transform: translateY(-3px);
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background:#283971;
+    transition: 0.3s;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+#profile {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 80px;
+    
+}
+
+#profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid white;
+}
+
+#menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+#menu a:hover {
+    background: #344a8a;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+}
+
+#overlay.active {
+    display: block;
+}

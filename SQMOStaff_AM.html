@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Account Management</title>
+<link rel="stylesheet" href="SQMOStaff_report.css">
+</head>
+<body>
+
+<div id="header">
+    <img src="XU_header.png" alt="XU_Logo">
+    <button id="menuBtn">☰</button>
+</div>
+
+<div class="page_name">
+    <h1>Account Management</h1>
+    <p>Quality Management Office</p>
+</div>
+
+<div id="accreditorAccountManager">
+    <h2>Accreditors and XU Admin</h2>
+    <input type="text" id="usernameAccreditor" placeholder="Enter email">
+    <select id="programSelect"></select>
+    <button id="addAccountBtnAccreditor">Add Account</button>
+
+    <h3>Account List</h3>
+    <ul id="accountListAccreditor"></ul>
+</div>
+
+<div id="sqmoAccountManager">
+    <h2>SQMO Staff</h2>
+    <input type="text" id="usernameSQMO" placeholder="Enter email">
+    <button id="addAccountBtnSQMO">Add Account</button>
+
+    <h3>Account List</h3>
+    <ul id="accountListSQMO"></ul>
+</div>
+
+<div id="overlay"></div>
+
+<div id="sidebar">
+    <div id="profile">
+        <img src="profile.jpg">
+        <h3>UserName</h3>
+        <p>SQMO Staff</p>
+    </div>
+
+    <div id="menu">
+        <a href="SQMOStaff_land.html">Landing Page</a>
+        <a href="Landing_Page.html">Log out</a>
+    </div>
+</div>
+
+<script src="SQMOStaff_AM.js"></script>
+</body>
+</html>

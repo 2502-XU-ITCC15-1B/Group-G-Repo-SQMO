@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SQMO Accreditation Portal</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/SQMOStaff_land.css') }}">
+</head>
+
+<body>
+
+<div id="Main_bkgrnd">
+
+
+    <div id="header">
+
+        <img src="/static/img/XU_logo.png" alt="XU Logo">
+
+        <div class="header-actions">
+            <button id="addBtn" class="log_outbtn" style="display:none;">+ Add Program</button>
+            <button id="adminToggle" class="log_outbtn">Edit: OFF</button>
+            <button class="log_outbtn" onclick="location.href='/'">Log out</button>
+        </div>
+        
+    </div>
+
+  
+    <div id="programs"></div>
+
+</div>
+
+<script src="/static/js/SQMOStaff_land.js"></script>
+</body>
+</html>
