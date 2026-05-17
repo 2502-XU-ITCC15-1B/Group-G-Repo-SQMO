@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidebar Close on Outside Click</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Top bar */
+#topbar {
+    height: 60px;
+    background: #283971;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+#menuBtn {
+    margin-left: auto;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sidebar */
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 260px;
+    height: 100%;
+    background: #1e2b57;
+    transition: 0.3s;
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+/* Dark overlay (this detects outside clicks) */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 999;
+}
+
+/* Show overlay when sidebar is open */
+#overlay.active {
+    display: block;
+}
+
+/* Profile */
+#profile {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+#profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+    border: 2px solid white;
+}
+
+/* Menu */
+#menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+#menu a:hover {
+    background: #344a8a;
+}
+
+/* Content */
+#content {
+    padding: 20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Top bar -->
+<div id="topbar">
+    <h3>Main Page</h3>
+    <button id="menuBtn">☰</button>
+</div>
+
+<!-- Overlay (click outside closes menu) -->
+<div id="overlay"></div>
+
+<!-- Sidebar -->
+<div id="sidebar">
+
+    <div id="profile">
+        <img src="https://via.placeholder.com/80">
+        <h3>John Doe</h3>
+        <p>Admin</p>
+    </div>
+
+    <div id="menu">
+        <a href="#">Main Page</a>
+        <a href="#">Programs</a>
+        <a href="#">Reports</a>
+        <a href="#">Settings</a>
+    </div>
+
+</div>
+
+<!-- Content -->
+<div id="content">
+    <h2>Welcome</h2>
+    <p>Click menu or outside to close sidebar.</p>
+</div>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+
+// open sidebar
+menuBtn.onclick = () => {
+    sidebar.classList.add("active");
+    overlay.classList.add("active");
+};
+
+// close when clicking outside
+overlay.onclick = () => {
+    sidebar.classList.remove("active");
+    overlay.classList.remove("active");
+};
+
+// optional: also close when clicking menu links
+document.querySelectorAll("#menu a").forEach(link => {
+    link.onclick = () => {
+        sidebar.classList.remove("active");
+        overlay.classList.remove("active");
+    };
+});
+</script>
+
+</body>
+</html>
