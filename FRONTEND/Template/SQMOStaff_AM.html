@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Management — QMO</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="SQMOStaff_AM.css">
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div class="logo-wrap">
+    <img src="XU_header.png" alt="Xavier University Logo">
+  </div>
+  <button id="menuBtn" aria-label="Open menu">☰</button>
+</div>
+
+<!-- Page title -->
+<div class="page_name">
+  <h1>Account Management</h1>
+  <p>Quality Management Office</p>
+</div>
+
+<!-- Main content -->
+<div class="main-content">
+
+  <!-- Accreditors card -->
+  <div class="account-card" id="accreditorAccountManager">
+    <div class="card-header">
+      <div class="card-icon blue">🏛</div>
+      <div>
+        <h2>Accreditors &amp; XU Admin</h2>
+        <p>Manage accreditor program access</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="input-row">
+        <input type="text" id="usernameAccreditor" placeholder="Enter email address" autocomplete="off">
+        <select id="programSelect">
+          <option value="" disabled selected>Program</option>
+        </select>
+        <button class="btn-add" id="addAccountBtnAccreditor">
+          <span class="plus">+</span> Add
+        </button>
+      </div>
+      <div class="list-header">
+        <div class="list-label">Account List</div>
+        <button class="btn-sort" id="sortBtnAccreditor" title="Sort alphabetically">
+          <span class="sort-arrow">↑</span> A–Z
+        </button>
+      </div>
+      <ul id="accountListAccreditor"></ul>
+    </div>
+  </div>
+
+  <!-- SQMO Staff card -->
+  <div class="account-card" id="sqmoAccountManager">
+    <div class="card-header">
+      <div class="card-icon gold">🔑</div>
+      <div>
+        <h2>SQMO Staff</h2>
+        <p>Manage staff portal access</p>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="input-row">
+        <input type="text" id="usernameSQMO" placeholder="Enter email address" autocomplete="off">
+        <button class="btn-add gold-btn" id="addAccountBtnSQMO">
+          <span class="plus">+</span> Add
+        </button>
+      </div>
+      <div class="list-header">
+        <div class="list-label">Account List</div>
+        <button class="btn-sort" id="sortBtnSQMO" title="Sort alphabetically">
+          <span class="sort-arrow">↑</span> A–Z
+        </button>
+      </div>
+      <ul id="accountListSQMO"></ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- Overlay + Sidebar -->
+<div id="overlay"></div>
+<div id="sidebar">
+  <div id="profile">
+    <div class="profile-fallback">👤</div>
+    <h3>UserName</h3>
+    <p>SQMO Staff</p>
+  </div>
+  <div id="menu">
+    <a href="SQMOStaff_land.html"> &nbsp;Landing Page</a>
+    <a href="Landing_Page.html"> &nbsp;Log out</a>
+  </div>
+</div>
+
+<script src="SQMOStaff_AM.js"></script>
+</body>
+</html>
