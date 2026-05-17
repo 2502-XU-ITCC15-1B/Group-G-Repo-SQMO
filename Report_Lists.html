@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Report_Lists</title>
+
+	 <link rel="stylesheet" href="Report_Lists.css">
+
+
+</head>
+
+<body>
+		<div id="header">
+			<img src="XU_header.png" alt="XU_Logo">
+			<button class="log_outbtn" onclick="location.href='Landing_Page.html'">Log out</button>
+		</div> 
+
+        <div class="header">
+        <h1>Report Lists</h1>
+        <p>Quality Management Office</p>
+        </div>
+
+
+		<div id="reports">
+
+			<div id="Primary_reports">
+				<button type="button" class="report_btn" data-key="leadership">Leadership and Governance</button>
+				<button type="button" class="report_btn" data-key="qa">Quality Assurance</button>
+				<button type="button" class="report_btn" data-key="resource">Resource Management</button>
+				<button type="button" class="report_btn" data-key="teaching">Teachings and Learnings</button>
+				<button type="button" class="report_btn" data-key="student">Student Service</button>
+				<button type="button" class="report_btn" data-key="external">External Relations</button>
+				<button type="button" class="report_btn" data-key="research">Research</button>
+				<button type="button" class="report_btn" data-key="results">Results</button>
+			</div>
+
+			<div id="Secondary_reports">
+				<button type="button" class="ndreport_btn" data-key="appendices">Appendices</button>
+				<button type="button" class="ndreport_btn" data-key="materials">Other Materials</button>
+				<button type="button" class="ndreport_btn" data-key="additional">Additional Documents + Requested</button>
+				<button type="button" class="ndreport_btn" data-key="others">Other Documents</button>
+			</div>
+
+		</div>
+	
+<script src="api.js"></script>
+<script src="Report_Lists.js"></script>
+</body>
+</html>
